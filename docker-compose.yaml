@@ -4,13 +4,12 @@ services:
     container_name: api1
     ports:
       - "8000:8000"
-    volumes:
-      - ./api:/api
+
     command: bash -c "python manage.py runserver 0.0.0.0:8000"
 
   web:
-    build: ./frontend
+    image: front:latest
+    container_name: front1
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend:/frontend
+
