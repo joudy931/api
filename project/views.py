@@ -6,8 +6,8 @@ def index(request):
     current_date = datetime.now().strftime("%A %m %-Y")
 
     data = {
-        'time': current_time,
-        'date': current_date,
+        'time': current_time
+       
     }
 
     return JsonResponse(data)
